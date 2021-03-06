@@ -71,7 +71,7 @@ ynh_system_user_create --username=$app
 #=================================================
 ynh_print_info "Installing dependencies..."
 
-ynh_install_app_dependencies $pkg_dependencies
+ynh_exec_warn_less ynh_install_app_dependencies $pkg_dependencies
 
 #=================================================
 # RESTORE THE POSTQRESQL DATABASE
