@@ -7,6 +7,6 @@ MB_DB_DBNAME=__DB_NAME__
 MB_DB_PORT=5432
 MB_DB_USER=__DB_NAME__
 MB_DB_PASS=__DB_PWD__
-MB_DB_HOST=localhost>
+MB_DB_HOST=localhost
 MB_EMOJI_IN_LOGS=false
 # any other env vars you want available to Metabase
