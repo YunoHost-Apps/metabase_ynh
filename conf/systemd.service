@@ -1,13 +1,13 @@
-[Unit]
-Description=Small description of the service
-After=network.target
-
 [Service]
 Type=simple
 User=__APP__
 Group=__APP__
-WorkingDirectory=__FINALPATH__/
-ExecStart=__FINALPATH__/script >> /var/log/__APP__/__APP__.log 2>&1
+WorkingDirectory=__FINALPATH__
+Environment="PATH=__ENV_PATH__;MB_JETTY_PORT=__PORT__"
+ExecStart="java -jar metabase.jar"
+StandardOutput=append:/var/log/__APP__/__APP__.log
+StandardError=inherit
+Restart=always
 
 [Install]
 WantedBy=multi-user.target

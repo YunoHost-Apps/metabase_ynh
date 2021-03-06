@@ -7,78 +7,80 @@
 - Add a `LICENSE` file for the package.
 - Edit `README.md` and `README_fr.md`.
 
-# Example app for YunoHost
+# Metabase for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/REPLACEBYYOURAPP.svg)](https://dash.yunohost.org/appci/app/REPLACEBYYOURAPP) ![](https://ci-apps.yunohost.org/ci/badges/REPLACEBYYOURAPP.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/REPLACEBYYOURAPP.maintain.svg)  
-[![Install REPLACEBYYOURAPP with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=REPLACEBYYOURAPP)
+<!-- [![Integration level](https://dash.yunohost.org/integration/metabase.svg)](https://dash.yunohost.org/appci/app/metabase) ![](https://ci-apps.yunohost.org/ci/badges/metabase.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/metabase.maintain.svg)
+[![Install metabase with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=metabase) -->
 
 *[Lire ce readme en français.](./README_fr.md)*
 
-> *This package allows you to install REPLACEBYYOURAPP quickly and simply on a YunoHost server.  
+> *This package allows you to install Metabase quickly and simply on a YunoHost server.
+
 If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/install) to learn how to install it.*
 
 ## Overview
 Quick description of this app.
 
-**Shipped version:** 1.0
+**Shipped version:** [0.38.1](https://github.com/metabase/metabase/releases/tag/v0.38.1)
 
-## Screenshots
+<!-- ## Screenshots
 
-![](Link to a screenshot of this app.)
+![](Link to a screenshot of this app.) -->
 
-## Demo
+<!-- ## Demo
 
-* [Official demo](Link to a demo site for this app.)
+* [Official demo](Link to a demo site for this app.) -->
 
-## Configuration
+<!-- ## Configuration
 
-How to configure this app: From an admin panel, a plain file with SSH, or any other way.
+How to configure this app: From an admin panel, a plain file with SSH, or any other way. -->
 
 ## Documentation
 
- * Official documentation: Link to the official documentation of this app
+ * [Official documentation](https://www.metabase.com/docs/latest/)
  * YunoHost documentation: If specific documentation is needed, feel free to contribute.
 
 ## YunoHost specific features
 
 #### Multi-user support
 
-Are LDAP and HTTP auth supported?
-Can the app be used by multiple users?
+- Not yet
 
-#### Supported architectures
+<!-- #### Supported architectures
 
-* x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/REPLACEBYYOURAPP%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/REPLACEBYYOURAPP/)
-* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/REPLACEBYYOURAPP%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/REPLACEBYYOURAPP/)
+* x86-64
 
-## Limitations
+* x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/metabase%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/metabase/)
+* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/metabase%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/metabase/) -->
 
-* Any known limitations.
+<!-- ## Limitations
 
-## Additional information
+* Any known limitations. -->
+
+<!-- ## Additional information
 
 * Other info you would like to add about this app.
 
-**More info on the documentation page:**  
-https://yunohost.org/packaging_apps
+**More info on the documentation page:**
+https://yunohost.org/packaging_apps -->
 
 ## Links
 
- * Report a bug: https://github.com/YunoHost-Apps/REPLACEBYYOURAPP_ynh/issues
+ * Report a bug: https://github.com/ColinMaudry/metabase_ynh/issues
  * App website: Link to the official website of this app.
- * Upstream app repository: Link to the official repository of the upstream app.
+ * [Upstream app repository](https://github.com/metabase/metabase)
  * YunoHost website: https://yunohost.org/
 
 ---
 
-## Developer info
+<!-- ## Developer info
 
 **Only if you want to use a testing branch for coding, instead of merging directly into master.**
-Please send your pull request to the [testing branch](https://github.com/YunoHost-Apps/REPLACEBYYOURAPP_ynh/tree/testing).
+Please send your pull request to the [testing branch](https://github.com/YunoHost-Apps/metabase_ynh/tree/testing).
 
 To try the testing branch, please proceed like that.
 ```
-sudo yunohost app install https://github.com/YunoHost-Apps/REPLACEBYYOURAPP_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/metabase_ynh/tree/testing --debug
 or
-sudo yunohost app upgrade REPLACEBYYOURAPP -u https://github.com/YunoHost-Apps/REPLACEBYYOURAPP_ynh/tree/testing --debug
-```
+sudo yunohost app upgrade metabase -u https://github.com/YunoHost-Apps/metabase_ynh/tree/testing --debug
+``` -->
