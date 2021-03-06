@@ -1,5 +1,7 @@
-SOURCE_URL="https://downloads.metabase.com/v0.38.1/metabase.jar"
+SOURCE_URL=https://downloads.metabase.com/v0.38.0.1/metabase.jar
+SOURCE_SUM=29c050f188758a9cf3fe84d632f19fbb4d3b6731cc0cc0fb7fe26042ed4d4a2c
+SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=jar
 SOURCE_IN_SUBDIR=false
-SOURCE_FILENAME=metabase.jar
 SOURCE_EXTRACT=false
+SOURCE_FILENAME=metabase.jar
