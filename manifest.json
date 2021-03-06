@@ -8,7 +8,7 @@
     },
     "version": "0.38.0.1~ynh1",
     "url": "https://www.metabase.com/",
-    "license": "AGPL",
+    "license": "AGPL-3.0-only",
     "maintainer": {
         "name": "Colin Maudry",
         "email": "colin@maudry.com",
