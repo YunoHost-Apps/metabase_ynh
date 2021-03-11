@@ -1,12 +1,20 @@
+[Unit]
+Description=Metabase server
+After=syslog.target
+After=network.target
+
 [Service]
 Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__FINALPATH__
-Environment="PATH=__ENV_PATH__;MB_JETTY_PORT=__PORT__"
-ExecStart="java -jar metabase.jar"
-StandardOutput=append:/var/log/__APP__/__APP__.log
-StandardError=inherit
+ExecStart=/usr/bin/java -jar __FINALPATH__/metabase.jar
+EnvironmentFile=/etc/default/metabase
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=__APP__
+SuccessExitStatus=143
+TimeoutStopSec=120
 Restart=always
 
 [Install]
