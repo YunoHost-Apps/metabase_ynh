@@ -6,7 +6,7 @@
         "en": "Web database management tool",
         "fr": "Outil web de gestion des bases de données"
     },
-    "version": "0.38.0.1~ynh1",
+    "version": "0.40.1~ynh1",
     "url": "https://www.metabase.com/",
     "license": "AGPL-3.0-only",
     "maintainer": {
