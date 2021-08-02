@@ -74,7 +74,7 @@ chmod +x $final_path/metabase.jar
 #=================================================
 # INSTALL DEPENDENCIES
 #=================================================
-ynh_print_info "Installing dependencies..."
+ynh_script_progression --message="Installing dependencies..."
 
 ynh_exec_warn_less ynh_install_app_dependencies $pkg_dependencies
 
