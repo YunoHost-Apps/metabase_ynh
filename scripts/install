@@ -77,6 +77,14 @@ ynh_psql_test_if_first_run
 ynh_psql_setup_db --db_user=$db_name --db_name=$db_name
 
 #=================================================
+# CREATE DEDICATED USER
+#=================================================
+ynh_script_progression --message="Configuring system user..." --weight=2
+
+# Create a system user
+ynh_system_user_create --username=$app
+
+#=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 ynh_script_progression --message="Setting up source files..." --weight=2
@@ -85,6 +93,11 @@ ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 # Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source --dest_dir="$final_path"
 
+chmod 750 "$final_path"
+chmod -R o-rwx "$final_path"
+chown -R $app:www-data "$final_path"
+chmod +x $final_path/metabase.jar
+
 #=================================================
 # NGINX CONFIGURATION
 #=================================================
@@ -92,14 +105,6 @@ ynh_script_progression --message="Configuring NGNX web server..." --weight=3
 
 # Create a dedicated NGINX config
 ynh_add_nginx_config
-
-#=================================================
-# CREATE DEDICATED USER
-#=================================================
-ynh_script_progression --message="Configuring system user..." --weight=2
-
-# Create a system user
-ynh_system_user_create --username=$app
 
 #=================================================
 # SETUP SYSTEMD
@@ -111,13 +116,13 @@ ynh_add_systemd_config
 #=================================================
 # SETUP CONFIG
 #=================================================
+ynh_script_progression --message="Adding a configuration file..." --weight=1
 
 touch /etc/default/$app
-cp ../conf/metabase /etc/default/$app
+ynh_add_config --template="../conf/metabase" --destination="/etc/default/$app"
 
-ynh_replace_string --match_string="__PORT__" --replace_string="$port" --target_file="/etc/default/$app"
-ynh_replace_string --match_string="__DB_NAME__" --replace_string="$db_name" --target_file="/etc/default/$app"
-ynh_replace_string --match_string="__DB_PWD__" --replace_string="$db_pwd" --target_file="/etc/default/$app"
+chmod 640 "/etc/default/$app"
+chown $app "/etc/default/$app"
 
 #=================================================
 # GENERIC FINALIZATION
@@ -125,12 +130,8 @@ ynh_replace_string --match_string="__DB_PWD__" --replace_string="$db_pwd" --targ
 # SECURE FILES AND DIRECTORIES
 #=================================================
 
-chmod +x $final_path/metabase.jar
-
-chown -R $app: $final_path
 touch /var/log/$app.log
 chown $app: /var/log/$app.log
-chmod 640 /etc/default/$app
 
 #=================================================
 # INTEGRATE SERVICE IN YUNOHOST
