@@ -117,13 +117,28 @@ ynh_script_progression --message="Configuring a systemd service..." --weight=3
 ynh_add_systemd_config
 
 #=================================================
-# GENERIC FINALIZATION
+# SETUP CONFIG
 #=================================================
-# SECURE FILES AND DIRECTORIES
-#=================================================
+ynh_script_progression --message="Adding a configuration file..." --weight=1
 
-chown $app: /var/log/$app.log
-chmod 640 /etc/default/$app
+touch /etc/default/$app
+ynh_add_config --template="../conf/metabase" --destination="/etc/default/$app"
+
+chmod 640 "/etc/default/$app"
+chown $app "/etc/default/$app"
+
+#=================================================
+# HANDLE LOG FILES AND LOGROTATE
+#=================================================
+ynh_script_progression --message="Configuring log rotation..." --weight=3
+
+# Create log directory
+mkdir -p /var/log/$app
+touch /var/log/$app/$app.log
+chown -R $app /var/log/$app
+
+# Setup logrotate
+ynh_use_logrotate --specific_user=$app/$app
 
 #=================================================
 # INTEGRATE SERVICE IN YUNOHOST
@@ -151,4 +166,4 @@ ynh_systemd_action --service_name=nginx --action=reload
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Upgrade of Metabase completed" --last
+ynh_script_progression --message="Upgrade of $app completed" --last

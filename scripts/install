@@ -129,8 +129,13 @@ chown $app "/etc/default/$app"
 # SECURE FILES AND DIRECTORIES
 #=================================================
 
-touch /var/log/$app.log
-chown $app: /var/log/$app.log
+# Create log directory
+mkdir -p /var/log/$app
+touch /var/log/$app/$app.log
+chown -R $app /var/log/$app
+
+# Setup logrotate
+ynh_use_logrotate --specific_user=$app/$app
 
 #=================================================
 # INTEGRATE SERVICE IN YUNOHOST
@@ -169,4 +174,4 @@ ynh_systemd_action --service_name=nginx --action=reload
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Installation of Metabase completed" --last
+ynh_script_progression --message="Installation of $app completed" --last
