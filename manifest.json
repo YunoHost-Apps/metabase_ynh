@@ -6,8 +6,16 @@
         "en": "Web database management tool",
         "fr": "Outil web de gestion des bases de données"
     },
-    "version": "0.38.0.1~ynh1",
+    "version": "0.40.0.1~ynh1",
     "url": "https://www.metabase.com/",
+    "upstream": {
+        "license": "AGPL-3.0-only",
+        "website": "https://www.metabase.com/",
+        "demo": "https://demo.example.com",
+        "admindoc": "https://www.metabase.com/docs/latest/",
+        "userdoc": "https://yunohost.org/apps",
+        "code": "https://github.com/metabase/metabase"
+    },
     "license": "AGPL-3.0-only",
     "maintainer": {
         "name": "Colin Maudry",
