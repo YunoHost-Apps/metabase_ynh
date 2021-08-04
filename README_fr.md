@@ -13,7 +13,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 Outil web de gestion des bases de données
 
-**Version incluse :** 0.40.0.1~ynh1
+**Version incluse :** 0.40.2~ynh1
 
 
 
