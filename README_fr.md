@@ -15,7 +15,7 @@ Outil web de gestion des bases de données
 
 **Version incluse :** 0.40.0.1~ynh1
 
-**Démo :** https://demo.example.com
+
 
 ## Captures d'écran
 
