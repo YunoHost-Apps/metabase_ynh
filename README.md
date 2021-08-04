@@ -19,7 +19,7 @@ Web database management tool
 
 **Shipped version:** 0.40.0.1~ynh1
 
-**Demo:** https://demo.example.com
+
 
 ## Screenshots
 
