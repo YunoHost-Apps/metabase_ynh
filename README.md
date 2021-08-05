@@ -11,7 +11,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 ## Overview
 Metabase is the easy, open source way for everyone in your company to ask questions and learn from data.
 
-**Shipped version:** 0.38.0.1
+**Shipped version:** 0.40.1
 
 ## Screenshots
 

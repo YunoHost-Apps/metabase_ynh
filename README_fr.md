@@ -11,7 +11,7 @@ Si vous n'avez pas YunoHost, consultez [le guide](https://yunohost.org/#/install
 ## Vue d'ensemble
 Metabase is the easy, open source way for everyone in your company to ask questions and learn from data.
 
-**Version incluse :** 0.38.0.1
+**Version incluse :** 0.40.1
 
 ## Captures d'écran
 
