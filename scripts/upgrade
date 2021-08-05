@@ -20,7 +20,6 @@ app=$YNH_APP_INSTANCE_NAME
 domain=$(ynh_app_setting_get --app=$app --key=domain)
 path_url=$(ynh_app_setting_get --app=$app --key=path)
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
-is_public=$(ynh_app_setting_get --app=$app --key=is_public)
 port=$(ynh_app_setting_get --app=$app --key=port)
 db_pwd=$(ynh_app_setting_get --app=$app --key=psqlpwd)
 db_name=$(ynh_app_setting_get --app=$app --key=db_name)
@@ -90,6 +89,11 @@ then
 	ynh_setup_source --dest_dir="$final_path"
 fi
 
+chmod 750 "$final_path"
+chmod -R o-rwx "$final_path"
+chown -R $app:www-data "$final_path"
+chmod +x $final_path/metabase.jar
+
 #=================================================
 # NGINX CONFIGURATION
 #=================================================
@@ -113,16 +117,28 @@ ynh_script_progression --message="Configuring a systemd service..." --weight=3
 ynh_add_systemd_config
 
 #=================================================
-# GENERIC FINALIZATION
+# SETUP CONFIG
 #=================================================
-# SECURE FILES AND DIRECTORIES
+ynh_script_progression --message="Adding a configuration file..." --weight=1
+
+touch /etc/default/$app
+ynh_add_config --template="../conf/metabase" --destination="/etc/default/$app"
+
+chmod 640 "/etc/default/$app"
+chown $app "/etc/default/$app"
+
 #=================================================
+# HANDLE LOG FILES AND LOGROTATE
+#=================================================
+ynh_script_progression --message="Configuring log rotation..." --weight=3
 
-chmod +x $final_path/metabase.jar
+# Create log directory
+mkdir -p /var/log/$app
+touch /var/log/$app/$app.log
+chown -R $app /var/log/$app
 
-chown -R $app: $final_path
-chown $app: /var/log/$app.log
-chmod 640 /etc/default/$app
+# Setup logrotate
+ynh_use_logrotate --specific_user=$app/$app
 
 #=================================================
 # INTEGRATE SERVICE IN YUNOHOST
@@ -137,7 +153,7 @@ yunohost service add $app --description="Web database management tool" --log="/v
 ynh_script_progression --message="Starting a systemd service..." --weight=5
 
 # Start a systemd service
-ynh_systemd_action --service_name=$app --action=start --log_path="systemd" --line_match=""
+ynh_systemd_action --service_name=$app --action=start --log_path="systemd" --line_match="Please use the following URL to setup your Metabase installation:"
 
 #=================================================
 # RELOAD NGINX
@@ -150,4 +166,4 @@ ynh_systemd_action --service_name=nginx --action=reload
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Upgrade of Metabase completed" --last
+ynh_script_progression --message="Upgrade of $app completed" --last

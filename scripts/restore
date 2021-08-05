@@ -48,15 +48,9 @@ test ! -d "$final_path" \
 #=================================================
 # RESTORE THE NGINX CONFIGURATION
 #=================================================
+ynh_script_progression --message="Restoring the NGINX configuration..." --weight=1
 
 ynh_restore_file --origin_path="/etc/nginx/conf.d/$domain.d/$app.conf"
-
-#=================================================
-# RESTORE THE APP MAIN DIR
-#=================================================
-ynh_script_progression --message="Restoring Metabase main directory..." --weight=2
-
-ynh_restore_file --origin_path="$final_path"
 
 #=================================================
 # RECREATE THE DEDICATED USER
@@ -64,12 +58,33 @@ ynh_restore_file --origin_path="$final_path"
 ynh_script_progression --message="Recreating the dedicated system user..." --weight=3
 
 # Create the dedicated user (if not existing)
-ynh_system_user_create --username=$app
+ynh_system_user_create --username=$app --home_dir="$final_path"
+
+#=================================================
+# RESTORE THE APP MAIN DIR
+#=================================================
+ynh_script_progression --message="Restoring the app main directory..." --weight=2
+
+ynh_restore_file --origin_path="$final_path"
+
+chmod 750 "$final_path"
+chmod -R o-rwx "$final_path"
+chown -R $app:www-data "$final_path"
+chmod +x $final_path/metabase.jar
+
+#=================================================
+# SETUP CONFIG
+#=================================================
+ynh_script_progression --message="Restoring a configuration file..." --weight=1
+
+ynh_restore_file --origin_path="/etc/default/$app"
+chmod 640 "/etc/default/$app"
+chown $app "/etc/default/$app"
 
 #=================================================
 # INSTALL DEPENDENCIES
 #=================================================
-ynh_print_info "Installing dependencies..."
+ynh_script_progression --message="Installing dependencies..."
 
 ynh_exec_warn_less ynh_install_app_dependencies $pkg_dependencies
 
@@ -81,6 +96,17 @@ ynh_script_progression --message="Restoring the PostgreSQL database..." --weight
 ynh_psql_test_if_first_run
 ynh_psql_setup_db --db_user=$db_user --db_name=$db_name --db_pwd=$db_pwd
 ynh_psql_execute_file_as_root --file="./db.sql" --database=$db_name
+
+#=================================================
+# HANDLE LOG FILES AND LOGROTATE
+#=================================================
+
+mkdir -p /var/log/$app
+touch /var/log/$app/$app.log
+chown $app -R /var/log/$app
+
+# Restore logrotate configuration
+ynh_restore_file --origin_path="/etc/logrotate.d/$app"
 
 #=================================================
 # SPECIFIC RESTORATION
@@ -104,7 +130,7 @@ yunohost service add $app --description="Web database management tool" --log="/v
 #=================================================
 ynh_script_progression --message="Starting a systemd service..." --weight=2
 
-ynh_systemd_action --service_name=$app --action=start --log_path="systemd" --line_match=""
+ynh_systemd_action --service_name=$app --action=start --log_path="systemd" --line_match="Please use the following URL to setup your Metabase installation:"
 
 #=================================================
 # GENERIC FINALIZATION
@@ -119,4 +145,4 @@ ynh_systemd_action --service_name=nginx --action=reload
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Restoration completed for Metabase" --last
+ynh_script_progression --message="Restoration completed for $app" --last
