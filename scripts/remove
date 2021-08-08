@@ -68,12 +68,30 @@ ynh_script_progression --message="Removing Metabase main directory..." --weight=
 ynh_secure_remove --file="$final_path"
 
 #=================================================
+# REMOVE APP MAIN DIR
+#=================================================
+ynh_script_progression --message="Removing the app configuration file..." --weight=1
+
+# Remove the app directory securely
+ynh_secure_remove --file="/etc/default/$app"
+
+#=================================================
 # REMOVE NGINX CONFIGURATION
 #=================================================
 ynh_script_progression --message="Removing NGINX web server configuration..." --weight=2
 
 # Remove the dedicated NGINX config
 ynh_remove_nginx_config
+
+#=================================================
+# REMOVE LOGROTATE CONFIGURATION
+#=================================================
+ynh_script_progression --message="Removing logrotate configuration..."
+
+ynh_secure_remove --file="/var/log/$app"
+
+# Remove the app-specific logrotate config
+ynh_remove_logrotate
 
 #=================================================
 # GENERIC FINALIZATION
@@ -89,4 +107,4 @@ ynh_system_user_delete --username=$app
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Removal of Metabase completed" --last
+ynh_script_progression --message="Removal of $app completed" --last
