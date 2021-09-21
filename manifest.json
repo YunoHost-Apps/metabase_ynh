@@ -32,8 +32,7 @@
     "arguments": {
         "install": [{
                 "name": "domain",
-                "type": "domain",
-                "example": "metabase.example.com"
+                "type": "domain"
             },
             {
                 "name": "is_public",
