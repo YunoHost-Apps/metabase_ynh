@@ -6,7 +6,7 @@
         "en": "Web database management tool",
         "fr": "Outil web de gestion des bases de données"
     },
-    "version": "0.40.2~ynh1",
+    "version": "0.40.2~ynh2",
     "url": "https://www.metabase.com/",
     "upstream": {
         "license": "AGPL-3.0-only",
@@ -32,8 +32,7 @@
     "arguments": {
         "install": [{
                 "name": "domain",
-                "type": "domain",
-                "example": "metabase.example.com"
+                "type": "domain"
             },
             {
                 "name": "is_public",
