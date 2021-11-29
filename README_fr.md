@@ -13,7 +13,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 Outil web de gestion des bases de données
 
-**Version incluse :** 0.40.2~ynh2
+**Version incluse :** 0.41.2~ynh1
 
 
 
@@ -24,7 +24,6 @@ Outil web de gestion des bases de données
 ## Documentations et ressources
 
 * Site officiel de l'app : https://www.metabase.com/
-* Documentation officielle utilisateur : https://yunohost.org/apps
 * Documentation officielle de l'admin : https://www.metabase.com/docs/latest/
 * Dépôt de code officiel de l'app : https://github.com/metabase/metabase
 * Documentation YunoHost pour cette app : https://yunohost.org/app_metabase

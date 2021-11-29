@@ -17,7 +17,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 Web database management tool
 
-**Shipped version:** 0.40.2~ynh2
+**Shipped version:** 0.41.2~ynh1
 
 
 
@@ -28,7 +28,6 @@ Web database management tool
 ## Documentation and resources
 
 * Official app website: https://www.metabase.com/
-* Official user documentation: https://yunohost.org/apps
 * Official admin documentation: https://www.metabase.com/docs/latest/
 * Upstream app code repository: https://github.com/metabase/metabase
 * YunoHost documentation for this app: https://yunohost.org/app_metabase
