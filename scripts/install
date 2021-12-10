@@ -81,7 +81,7 @@ ynh_psql_setup_db --db_user=$db_name --db_name=$db_name
 ynh_script_progression --message="Configuring system user..." --weight=2
 
 # Create a system user
-ynh_system_user_create --username=$app
+ynh_system_user_create --username=$app --home_dir="$final_path"
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
@@ -126,16 +126,12 @@ chown $app "/etc/default/$app"
 #=================================================
 # GENERIC FINALIZATION
 #=================================================
-# SECURE FILES AND DIRECTORIES
+# SETUP LOGROTATE
 #=================================================
+ynh_script_progression --message="Configuring log rotation..." --weight=1
 
-# Create log directory
-mkdir -p /var/log/$app
-touch /var/log/$app/$app.log
-chown -R $app /var/log/$app
-
-# Setup logrotate
-ynh_use_logrotate --specific_user=$app/$app
+# Use logrotate to manage application logfile(s)
+ynh_use_logrotate
 
 #=================================================
 # INTEGRATE SERVICE IN YUNOHOST
