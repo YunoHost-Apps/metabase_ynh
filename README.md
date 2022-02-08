@@ -17,7 +17,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 Web database management tool
 
-**Shipped version:** 0.41.2~ynh1
+**Shipped version:** 0.42.0~ynh1
 
 
 
