@@ -94,7 +94,7 @@ then
 	ynh_script_progression --message="Upgrading source files..." --weight=1
 
 	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$final_path"
+	ynh_setup_source --dest_dir="$final_path" --keep="/etc/default/$app"
 fi
 
 chmod 750 "$final_path"
@@ -127,13 +127,13 @@ ynh_add_systemd_config
 #=================================================
 # SETUP CONFIG
 #=================================================
-ynh_script_progression --message="Adding a configuration file..." --weight=1
+# ynh_script_progression --message="Adding a configuration file..." --weight=1
 
-touch /etc/default/$app
-ynh_add_config --template="../conf/metabase" --destination="/etc/default/$app"
+# touch /etc/default/$app
+# ynh_add_config --template="../conf/metabase" --destination="/etc/default/$app"
 
-chmod 640 "/etc/default/$app"
-chown $app "/etc/default/$app"
+# chmod 640 "/etc/default/$app"
+# chown $app "/etc/default/$app"
 
 #=================================================
 # HANDLE LOG FILES AND LOGROTATE
