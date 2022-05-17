@@ -1,5 +1,5 @@
-SOURCE_URL=https://downloads.metabase.com/v0.42.4/metabase.jar
-SOURCE_SUM=6e2dd9153b878367f75680e3edbbbaa5b4d6fb4f878977823dc58cc201d76682
+SOURCE_URL=https://downloads.metabase.com/v0.43.1/metabase.jar
+SOURCE_SUM=5866c8b26096b12c6013b2adaf9dfda93b7fa39709ad88b4caedd991f6f1395d
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=jar
 SOURCE_IN_SUBDIR=false
