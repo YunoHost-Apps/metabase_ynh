@@ -12,7 +12,8 @@
         "license": "AGPL-3.0-only",
         "website": "https://www.metabase.com/",
         "admindoc": "https://www.metabase.com/docs/latest/",
-        "code": "https://github.com/metabase/metabase"
+        "code": "https://github.com/metabase/metabase",
+        "cpe": "cpe:2.3:a:metabase:metabase"
     },
     "license": "AGPL-3.0-only",
     "maintainer": {
@@ -29,7 +30,8 @@
         "postgres"
     ],
     "arguments": {
-        "install": [{
+        "install": [
+            {
                 "name": "domain",
                 "type": "domain"
             },
@@ -45,4 +47,3 @@
         ]
     }
 }
-
