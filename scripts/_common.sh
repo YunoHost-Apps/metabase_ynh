@@ -5,7 +5,7 @@
 #=================================================
 
 # dependencies used by the app
-pkg_dependencies="openjdk-11-jre-headless postgresql postgresql-contrib apt-transport-https"
+#REMOVEME? pkg_dependencies="openjdk-11-jre-headless postgresql postgresql-contrib apt-transport-https"
 
 #=================================================
 # PERSONAL HELPERS
