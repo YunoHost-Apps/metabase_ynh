@@ -1,5 +1,5 @@
 [Unit]
-Description=Metabase server
+Description=Metabase: Web database management tool
 After=syslog.target
 After=network.target
 
@@ -7,8 +7,8 @@ After=network.target
 Type=simple
 User=__APP__
 Group=__APP__
-WorkingDirectory=__FINALPATH__
-ExecStart=/usr/bin/java -jar __FINALPATH__/metabase.jar
+WorkingDirectory=__INSTALL_DIR__
+ExecStart=/usr/bin/java -jar __INSTALL_DIR__/metabase.jar
 EnvironmentFile=/etc/default/metabase
 StandardOutput=syslog
 StandardError=syslog
