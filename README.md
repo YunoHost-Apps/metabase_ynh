@@ -5,7 +5,8 @@ It shall NOT be edited by hand.
 
 # Metabase for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/metabase.svg)](https://dash.yunohost.org/appci/app/metabase) ![Working status](https://ci-apps.yunohost.org/ci/badges/metabase.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/metabase.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/metabase.svg)](https://dash.yunohost.org/appci/app/metabase) ![Working status](https://ci-apps.yunohost.org/ci/badges/metabase.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/metabase.maintain.svg)
+
 [![Install Metabase with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=metabase)
 
 *[Lire ce readme en français.](./README_fr.md)*
