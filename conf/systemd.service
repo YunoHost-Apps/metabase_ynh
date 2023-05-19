@@ -1,5 +1,5 @@
 [Unit]
-Description=Metabase server
+Description=Metabase: Web database management tool
 After=syslog.target
 After=network.target
 
