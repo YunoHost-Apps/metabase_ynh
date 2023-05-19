@@ -16,7 +16,7 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 
 ## Vue d’ensemble
 
-Outil web de gestion des bases de données
+Metabase is the easy, open-source way for everyone in your company to ask questions and learn from data.
 
 **Version incluse :** 0.44.6~ynh1
 
