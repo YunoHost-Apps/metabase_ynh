@@ -53,7 +53,7 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "postgresql"
+    packages = "postgresql openjdk-11-jre-headless apt-transport-https"
 
     [resources.database]
-    type = "postgresql openjdk-11-jre-headless apt-transport-https"
+    type = "postgresql"
