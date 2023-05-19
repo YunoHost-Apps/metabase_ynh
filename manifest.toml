@@ -1,0 +1,59 @@
+packaging_format = 2
+
+id = "metabase"
+name = "Metabase"
+description.en = "Web database management tool"
+description.fr = "Outil web de gestion des bases de données"
+
+version = "0.44.6~ynh1"
+
+maintainers = ["Colin Maudry"]
+
+[upstream]
+license = "AGPL-3.0-only"
+website = "https://www.metabase.com/"
+admindoc = "https://www.metabase.com/docs/latest/"
+code = "https://github.com/metabase/metabase"
+
+[integration]
+yunohost = ">= 11.1.19"
+architectures = "all"
+multi_instance = false
+ldap = false
+sso = false
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+    full_domain = true
+
+    [install.init_main_permission]
+    help.en = "If enabled, Metabase will be accessible by people who do not have an account. This can be changed later via the webadmin."
+    help.fr = "Si cette case est cochée, Metabase sera accessible aux personnes n’ayant pas de compte. Vous pourrez changer ceci plus tard via la webadmin."
+    type = "group"
+    default = "visitors"
+
+[resources]
+        [resources.sources.main]
+        url = "https://downloads.metabase.com/v0.46.3/metabase.jar"
+        sha256 = "5988d34062484b664e89ba152d8949498b3d8d9a3c51f40ce2ac7938058cd164"
+        extract = false
+        rename = "metabase.jar"
+
+    [resources.ports]
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.permissions]
+    main.url = "/"
+
+    [resources.apt]
+    packages = "postgresql openjdk-11-jre-headless apt-transport-https"
+
+    [resources.database]
+    type = "postgresql"

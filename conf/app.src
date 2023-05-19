@@ -1,7 +1,0 @@
-SOURCE_URL=https://downloads.metabase.com/v0.44.6/metabase.jar
-SOURCE_SUM=6b44d59b54d4fa95be2051bd9ba1b872deb8ba3605624cfdb69027eee75ff81c
-SOURCE_SUM_PRG=sha256sum
-SOURCE_FORMAT=jar
-SOURCE_IN_SUBDIR=false
-SOURCE_EXTRACT=false
-SOURCE_FILENAME=metabase.jar
