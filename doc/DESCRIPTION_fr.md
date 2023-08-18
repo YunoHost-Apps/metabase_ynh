@@ -1,0 +1,1 @@
+La métabase est le moyen facile et open source pour tous les membres de votre entreprise de poser des questions et d'apprendre à partir des données.
