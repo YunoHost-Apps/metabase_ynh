@@ -29,7 +29,7 @@ Metabase is the easy, open-source way for everyone in your company to ask questi
 * Official app website: <https://www.metabase.com/>
 * Official admin documentation: <https://www.metabase.com/docs/latest/>
 * Upstream app code repository: <https://github.com/metabase/metabase>
-* YunoHost documentation for this app: <https://yunohost.org/app_metabase>
+* YunoHost Store: <https://apps.yunohost.org/app/metabase>
 * Report a bug: <https://github.com/YunoHost-Apps/metabase_ynh/issues>
 
 ## Developer info

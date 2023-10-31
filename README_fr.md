@@ -29,7 +29,7 @@ La métabase est le moyen facile et open source pour tous les membres de votre e
 * Site officiel de l’app : <https://www.metabase.com/>
 * Documentation officielle de l’admin : <https://www.metabase.com/docs/latest/>
 * Dépôt de code officiel de l’app : <https://github.com/metabase/metabase>
-* Documentation YunoHost pour cette app : <https://yunohost.org/app_metabase>
+* YunoHost Store: <https://apps.yunohost.org/app/metabase>
 * Signaler un bug : <https://github.com/YunoHost-Apps/metabase_ynh/issues>
 
 ## Informations pour les développeurs
