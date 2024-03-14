@@ -17,7 +17,6 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 ## Vue d’ensemble
 
 La métabase est le moyen facile et open source pour tous les membres de votre entreprise de poser des questions et d'apprendre à partir des données.
-
 **Version incluse :** 0.48.6~ynh1
 
 ## Captures d’écran
@@ -26,11 +25,11 @@ La métabase est le moyen facile et open source pour tous les membres de votre e
 
 ## Documentations et ressources
 
-* Site officiel de l’app : <https://www.metabase.com/>
-* Documentation officielle de l’admin : <https://www.metabase.com/docs/latest/>
-* Dépôt de code officiel de l’app : <https://github.com/metabase/metabase>
-* YunoHost Store: <https://apps.yunohost.org/app/metabase>
-* Signaler un bug : <https://github.com/YunoHost-Apps/metabase_ynh/issues>
+- Site officiel de l’app : <https://www.metabase.com/>
+- Documentation officielle de l’admin : <https://www.metabase.com/docs/latest/>
+- Dépôt de code officiel de l’app : <https://github.com/metabase/metabase>
+- YunoHost Store : <https://apps.yunohost.org/app/metabase>
+- Signaler un bug : <https://github.com/YunoHost-Apps/metabase_ynh/issues>
 
 ## Informations pour les développeurs
 
@@ -38,7 +37,7 @@ Merci de faire vos pull request sur la [branche testing](https://github.com/Yuno
 
 Pour essayer la branche testing, procédez comme suit.
 
-``` bash
+```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/metabase_ynh/tree/testing --debug
 ou
 sudo yunohost app upgrade metabase -u https://github.com/YunoHost-Apps/metabase_ynh/tree/testing --debug
