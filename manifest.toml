@@ -42,6 +42,9 @@ ram.runtime = "50M"
         extract = false
         rename = "metabase.jar"
 
+        # Careful, this will generate invalid PRs, it's only here as a notification bell
+        autoupdate.strategy = "latest_github_release"
+
     [resources.ports]
 
     [resources.system_user]
