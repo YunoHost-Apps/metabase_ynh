@@ -17,7 +17,6 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 ## Overview
 
 Metabase is the easy, open-source way for everyone in your company to ask questions and learn from data.
-
 **Shipped version:** 0.48.6~ynh1
 
 ## Screenshots
@@ -26,11 +25,11 @@ Metabase is the easy, open-source way for everyone in your company to ask questi
 
 ## Documentation and resources
 
-* Official app website: <https://www.metabase.com/>
-* Official admin documentation: <https://www.metabase.com/docs/latest/>
-* Upstream app code repository: <https://github.com/metabase/metabase>
-* YunoHost Store: <https://apps.yunohost.org/app/metabase>
-* Report a bug: <https://github.com/YunoHost-Apps/metabase_ynh/issues>
+- Official app website: <https://www.metabase.com/>
+- Official admin documentation: <https://www.metabase.com/docs/latest/>
+- Upstream app code repository: <https://github.com/metabase/metabase>
+- YunoHost Store: <https://apps.yunohost.org/app/metabase>
+- Report a bug: <https://github.com/YunoHost-Apps/metabase_ynh/issues>
 
 ## Developer info
 
@@ -38,7 +37,7 @@ Please send your pull request to the [testing branch](https://github.com/YunoHos
 
 To try the testing branch, please proceed like that.
 
-``` bash
+```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/metabase_ynh/tree/testing --debug
 or
 sudo yunohost app upgrade metabase -u https://github.com/YunoHost-Apps/metabase_ynh/tree/testing --debug
