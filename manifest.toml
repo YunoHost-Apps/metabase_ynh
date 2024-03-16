@@ -5,7 +5,7 @@ name = "Metabase"
 description.en = "Web database management tool"
 description.fr = "Outil web de gestion des bases de données"
 
-version = "0.48.6~ynh1"
+version = "1.49.0~ynh1"
 
 maintainers = ["Colin Maudry"]
 
@@ -37,8 +37,8 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        url = "https://downloads.metabase.com/v0.48.6/metabase.jar"
-        sha256 = "aefb5e000abe14ff3cb4ba754c55e1da34bdaea35a77fbea3282ee32bc73978b"
+        url = "https://github.com/metabase/metabase/archive/refs/tags/v1.49.0.tar.gz"
+        sha256 = "50a1a0656729731239493f045f15ab74080e724a1ba6ed7493e97da341250185"
         extract = false
         rename = "metabase.jar"
 
