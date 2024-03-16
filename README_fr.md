@@ -17,7 +17,7 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 ## Vue d’ensemble
 
 La métabase est le moyen facile et open source pour tous les membres de votre entreprise de poser des questions et d'apprendre à partir des données.
-**Version incluse :** 0.48.6~ynh1
+**Version incluse :** 1.49.0~ynh1
 
 ## Captures d’écran
 
