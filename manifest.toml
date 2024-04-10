@@ -42,8 +42,8 @@ ram.runtime = "50M"
         extract = false
         rename = "metabase.jar"
 
-        # Careful, this will generate invalid PRs, it's only here as a notification bell
-        autoupdate.strategy = "latest_github_release"
+        # Disabled. Metabase releases its Community Edition as v0.x and Entreprise Edition as v1.x. What the heck.
+        # autoupdate.strategy = "latest_github_release"
 
     [resources.ports]
 
