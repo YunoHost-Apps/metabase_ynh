@@ -55,7 +55,17 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "postgresql openjdk-11-jre-headless apt-transport-https"
+    packages = [
+        "postgresql",
+        "apt-transport-https"
+    ]
+    packages_from_raw_bash = """
+    if [[ $YNH_DEBIAN_VERSION == "bullseye" ]]; then
+        echo "openjdk-11-jre-headless";
+    elif [[ $YNH_DEBIAN_VERSION == "bookworm" ]]; then
+        echo "openjdk-17-jre-headless";
+    fi
+    """
 
     [resources.database]
     type = "postgresql"
