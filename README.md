@@ -9,7 +9,7 @@ It shall NOT be edited by hand.
 
 [![Install Metabase with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=metabase)
 
-*[Read this README is other languages.](./ALL_README.md)*
+*[Read this README in other languages.](./ALL_README.md)*
 
 > *This package allows you to install Metabase quickly and simply on a YunoHost server.*  
 > *If you don't have YunoHost, please consult [the guide](https://yunohost.org/install) to learn how to install it.*
@@ -18,7 +18,7 @@ It shall NOT be edited by hand.
 
 Metabase is the easy, open-source way for everyone in your company to ask questions and learn from data.
 
-**Shipped version:** 0.48.6~ynh1
+**Shipped version:** 0.49.4~ynh1
 
 ## Screenshots
 
