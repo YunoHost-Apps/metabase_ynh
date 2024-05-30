@@ -3,7 +3,7 @@
 请勿手动编辑。
 -->
 
-# YunoHost 的 Metabase
+# YunoHost 上的 Metabase
 
 [![集成程度](https://dash.yunohost.org/integration/metabase.svg)](https://dash.yunohost.org/appci/app/metabase) ![工作状态](https://ci-apps.yunohost.org/ci/badges/metabase.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/metabase.maintain.svg)
 
@@ -18,7 +18,7 @@
 
 Metabase is the easy, open-source way for everyone in your company to ask questions and learn from data.
 
-**分发版本：** 0.49.4~ynh1
+**分发版本：** 0.49.13~ynh1
 
 ## 截图
 
