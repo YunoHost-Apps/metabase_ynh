@@ -18,7 +18,7 @@ No se debe editar a mano.
 
 Metabase is the easy, open-source way for everyone in your company to ask questions and learn from data.
 
-**Versión actual:** 0.49.4~ynh1
+**Versión actual:** 0.49.13~ynh1
 
 ## Capturas
 
