@@ -2,8 +2,8 @@ packaging_format = 2
 
 id = "metabase"
 name = "Metabase"
-description.en = "Web database management tool"
-description.fr = "Outil web de gestion des bases de données"
+description.en = "Self-service Business Intelligence/Analytics platform"
+description.fr = "Plateforme de Business Intelligence/Analytics en libre-service"
 
 version = "0.49.13~ynh1"
 
