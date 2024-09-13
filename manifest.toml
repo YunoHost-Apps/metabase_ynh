@@ -37,8 +37,8 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        url = "https://downloads.metabase.com/v0.49.13/metabase.jar"
-        sha256 = "3d852ab3383fceef3608b9a98f8dec6c467a1f48de728173deeacd19a6b1fa54"
+        url = "https://downloads.metabase.com/v0.50.25/metabase.jar"
+        sha256 = "88ba6666488e1279b0cb6080a649e52a747b86320a0ebe3fb6060b095cf57650"
         extract = false
         rename = "metabase.jar"
 
