@@ -18,7 +18,7 @@ EZ editatu eskuz.
 
 Metabase is the easy, open-source way for everyone in your company to ask questions and learn from data.
 
-**Paketatutako bertsioa:** 0.49.13~ynh1
+**Paketatutako bertsioa:** 0.50.26~ynh1
 
 ## Pantaila-argazkiak
 
