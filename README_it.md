@@ -18,7 +18,7 @@ NON DEVE essere modificato manualmente.
 
 Metabase is the easy, open-source way for everyone in your company to ask questions and learn from data.
 
-**Versione pubblicata:** 0.48.6~ynh1
+**Versione pubblicata:** 0.50.26~ynh1
 
 ## Screenshot
 

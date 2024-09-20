@@ -18,7 +18,7 @@ It shall NOT be edited by hand.
 
 Metabase is the easy, open-source way for everyone in your company to ask questions and learn from data.
 
-**Shipped version:** 0.49.13~ynh1
+**Shipped version:** 0.50.26~ynh1
 
 ## Screenshots
 
