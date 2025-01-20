@@ -20,7 +20,7 @@ Hij mag NIET handmatig aangepast worden.
 
 Metabase is the easy, open-source way for everyone in your company to ask questions and learn from data.
 
-**Geleverde versie:** 0.49.13~ynh1
+**Geleverde versie:** 0.52.6~ynh1
 
 ## Schermafdrukken
 

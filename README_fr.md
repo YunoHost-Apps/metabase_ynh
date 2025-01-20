@@ -20,7 +20,7 @@ Il NE doit PAS être modifié à la main.
 
 La métabase est le moyen facile et open source pour tous les membres de votre entreprise de poser des questions et d'apprendre à partir des données.
 
-**Version incluse :** 0.49.13~ynh1
+**Version incluse :** 0.52.6~ynh1
 
 ## Captures d’écran
 

@@ -20,7 +20,7 @@
 
 Metabase is the easy, open-source way for everyone in your company to ask questions and learn from data.
 
-**Поставляемая версия:** 0.49.13~ynh1
+**Поставляемая версия:** 0.52.6~ynh1
 
 ## Снимки экрана
 

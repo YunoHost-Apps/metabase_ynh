@@ -20,7 +20,7 @@ Nie powinno być ono edytowane ręcznie.
 
 Metabase is the easy, open-source way for everyone in your company to ask questions and learn from data.
 
-**Dostarczona wersja:** 0.49.13~ynh1
+**Dostarczona wersja:** 0.52.6~ynh1
 
 ## Zrzuty ekranu
 
