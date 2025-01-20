@@ -25,7 +25,6 @@ ynh_safe_rm "/etc/default/$app"
 # Remove the dedicated NGINX config
 ynh_config_remove_nginx
 
-#REMOVEME? (Apps should not remove their log dir during remove ... this should only happen if --purge is used, and be handled by the core...) ynh_safe_rm "/var/log/$app"
 # Remove the app-specific logrotate config
 ynh_config_remove_logrotate
 
