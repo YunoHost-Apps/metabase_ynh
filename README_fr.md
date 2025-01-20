@@ -5,7 +5,9 @@ Il NE doit PAS être modifié à la main.
 
 # Metabase pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/metabase.svg)](https://dash.yunohost.org/appci/app/metabase) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/metabase.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/metabase.maintain.svg)
+[![Niveau d’intégration](https://apps.yunohost.org/badge/integration/metabase)](https://ci-apps.yunohost.org/ci/apps/metabase/)
+![Statut du fonctionnement](https://apps.yunohost.org/badge/state/metabase)
+![Statut de maintenance](https://apps.yunohost.org/badge/maintained/metabase)
 
 [![Installer Metabase avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=metabase)
 
@@ -18,7 +20,7 @@ Il NE doit PAS être modifié à la main.
 
 La métabase est le moyen facile et open source pour tous les membres de votre entreprise de poser des questions et d'apprendre à partir des données.
 
-**Version incluse :** 0.49.13~ynh1
+**Version incluse :** 0.52.6~ynh1
 
 ## Captures d’écran
 
