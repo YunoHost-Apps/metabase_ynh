@@ -5,7 +5,9 @@ No se debe editar a mano.
 
 # Metabase para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/metabase.svg)](https://dash.yunohost.org/appci/app/metabase) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/metabase.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/metabase.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/metabase)](https://ci-apps.yunohost.org/ci/apps/metabase/)
+![Estado funcional](https://apps.yunohost.org/badge/state/metabase)
+![Estado En Mantención](https://apps.yunohost.org/badge/maintained/metabase)
 
 [![Instalar Metabase con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=metabase)
 
@@ -34,7 +36,7 @@ Metabase is the easy, open-source way for everyone in your company to ask questi
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/metabase_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/metabase_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 

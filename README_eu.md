@@ -5,7 +5,9 @@ EZ editatu eskuz.
 
 # Metabase YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/metabase.svg)](https://dash.yunohost.org/appci/app/metabase) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/metabase.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/metabase.maintain.svg)
+[![Integrazio maila](https://apps.yunohost.org/badge/integration/metabase)](https://ci-apps.yunohost.org/ci/apps/metabase/)
+![Funtzionamendu egoera](https://apps.yunohost.org/badge/state/metabase)
+![Mantentze egoera](https://apps.yunohost.org/badge/maintained/metabase)
 
 [![Instalatu Metabase YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=metabase)
 
