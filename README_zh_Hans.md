@@ -20,7 +20,7 @@
 
 Metabase is the easy, open-source way for everyone in your company to ask questions and learn from data.
 
-**分发版本：** 0.52.6~ynh1
+**分发版本：** 0.52.6~ynh2
 
 ## 截图
 

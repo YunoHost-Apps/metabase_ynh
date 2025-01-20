@@ -20,7 +20,7 @@ Ini TIDAK boleh diedit dengan tangan.
 
 Metabase is the easy, open-source way for everyone in your company to ask questions and learn from data.
 
-**Versi terkirim:** 0.52.6~ynh1
+**Versi terkirim:** 0.52.6~ynh2
 
 ## Tangkapan Layar
 
