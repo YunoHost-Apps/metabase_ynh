@@ -5,7 +5,7 @@ name = "Metabase"
 description.en = "Self-service Business Intelligence/Analytics platform"
 description.fr = "Plateforme de Business Intelligence/Analytics en libre-service"
 
-version = "0.52.6~ynh2"
+version = "0.54.9~ynh1"
 
 maintainers = ["Colin Maudry"]
 
@@ -40,8 +40,8 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        url = "https://downloads.metabase.com/v0.52.6/metabase.jar"
-        sha256 = "19d937dabb165cbe55de7371d20e7e13c4b15531b3ccd4a3fae7418fd7389413"
+        url = "https://downloads.metabase.com/v0.54.9/metabase.jar"
+        sha256 = "a0c8355b11f03b48b63a970879a23602a697d136c8e6a7503fd9326e0e0c9778"
         extract = false
         rename = "metabase.jar"
 
