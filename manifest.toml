@@ -2,10 +2,10 @@ packaging_format = 2
 
 id = "metabase"
 name = "Metabase"
-description.en = "Web database management tool"
-description.fr = "Outil web de gestion des bases de données"
+description.en = "Self-service Business Intelligence/Analytics platform"
+description.fr = "Plateforme de Business Intelligence/Analytics en libre-service"
 
-version = "0.52.6~ynh2"
+version = "0.54.9~ynh1"
 
 maintainers = ["Colin Maudry"]
 
@@ -16,7 +16,7 @@ admindoc = "https://www.metabase.com/docs/latest/"
 code = "https://github.com/metabase/metabase"
 
 [integration]
-yunohost = ">= 12.0.9"
+yunohost = ">= 12.1.38"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = false
@@ -40,8 +40,8 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        url = "https://downloads.metabase.com/v0.52.6/metabase.jar"
-        sha256 = "19d937dabb165cbe55de7371d20e7e13c4b15531b3ccd4a3fae7418fd7389413"
+        url = "https://downloads.metabase.com/v0.54.9.x/metabase.jar"
+        sha256 = "cbf5575b494e8f5995983122d245815c8dbc0f4328e0a7713caf502bb3aa35fb"
         extract = false
         rename = "metabase.jar"
 
@@ -67,6 +67,8 @@ ram.runtime = "50M"
         echo "openjdk-11-jre-headless";
     elif [[ $YNH_DEBIAN_VERSION == "bookworm" ]]; then
         echo "openjdk-17-jre-headless";
+    elif [[ $YNH_DEBIAN_VERSION == "trixie" ]]; then
+        echo "openjdk-21-jre-headless";
     fi
     """
 
