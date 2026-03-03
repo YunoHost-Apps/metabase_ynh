@@ -67,6 +67,8 @@ ram.runtime = "50M"
         echo "openjdk-11-jre-headless";
     elif [[ $YNH_DEBIAN_VERSION == "bookworm" ]]; then
         echo "openjdk-17-jre-headless";
+    elif [[ $YNH_DEBIAN_VERSION == "trixie" ]]; then
+        echo "openjdk-21-jre-headless";
     fi
     """
 
